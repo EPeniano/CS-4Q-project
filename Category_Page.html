@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>School Tools</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="s">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+<style>
+
+    *{
+margin: 0;
+padding: 0;
+}
+.navbar{
+display: flex;
+align-items: center;
+padding: 0px;
+background-color: purple;
+
+}
+nav{
+flex: 1;
+text-align: center;
+font-size: 20px;
+font-family: 'Josefin Sans', sans-serif;
+padding: 20px;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+nav ul li{
+display: inline-block;
+margin-right: 20px;
+
+}
+a{
+text-decoration: none;
+color: white;
+}
+p{
+color:#555;
+font-family: 'Rubik', sans-serif;
+}
+.container{
+max-width: 1300px;
+margin: auto;
+padding-left: 25px;
+padding-right: 25px;
+padding-top: 25px;
+text-align: center;
+}
+.col-2{
+margin: auto;
+text-align: center;
+}
+.small-container{
+max-width: 1080px;
+margin: auto;
+padding-left: 25px;
+padding-right: 25px;
+}
+.col-4{
+text-align: center;
+margin: auto;
+padding: 20px;
+}
+
+.col-4 img{
+width: 70%;
+}
+
+body {
+background-color: skyblue;
+overflow-x: hidden;
+}
+h1{
+text-align:center;
+font-size: 50px;
+font-family: 'Josefin Sans', sans-serif;
+margin-top: 5px;
+}
+h2{
+font-size: 100px;
+background-color: lavender;
+font-family: 'Kanit', sans-serif;
+}
+h4{
+font-size: 40px;
+font-family: 'Rubik', sans-serif;
+}
+p{
+font-size: 30px;
+}
+.btn-primary {
+color: black;
+background-color: pink;
+border: none;
+font-family: 'Rubik', sans-serif; 
+}
+
+.btn-primary:hover {
+background-color: #2D9CDB;
+}
+.btn {
+text-align: center;
+vertical-align: middle;
+padding: 20px;
+cursor: pointer;
+border-radius: 5px;
+font-size: 30px;  
+}
+.shop-item-title {
+display: block;
+width: 100%;
+text-align: center;
+font-weight: bold;
+font-size: 1.5em;
+color: #333;
+margin-bottom: 15px;
+}
+
+.shop-item-image {
+height: 250px;
+}
+
+.shop-item-details {
+display: flex;
+align-items: center;
+padding: 5px;
+}
+
+.shop-item-price {
+flex-grow: 1;
+color: #333;
+}
+
+.shop-items {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.cart-header {
+font-weight: bold;
+font-size: 1.25em;
+color: #333;
+}
+
+.cart-column {
+display: flex;
+align-items: center;
+border-bottom: 1px solid black;
+margin-right: 1.5em;
+padding-bottom: 10px;
+margin-top: 10px;
+}
+
+.cart-row {
+display: flex;
+}
+
+.cart-item {
+width: 50%;
+}
+
+.cart-quantity {
+width: 50%
+}
+
+.cart-item-title {
+color: #333;
+margin-left: .5em;
+font-size: 1.2em;
+}
+
+.btn-outline-danger{
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    padding: 0px;
+    float:right;
+    font-family: 'Rubik', sans-serif;
+    width: 150px;
+    height: 50px;
+}
+
+.btn-outline-danger:hover {
+background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+height: 34px;
+width: 50px;
+border-radius: 5px;
+border: 1px solid #56CCF2;
+background-color: #eee;
+color: #333;
+padding: 0;
+text-align: center;
+font-size: 1.2em;
+margin-right: 25px;
+}
+
+.cart-row:last-child {
+border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+border: none;
+}
+
+.cart-total {
+text-align: end;
+margin-top: 10px;
+margin-right: 10px;
+}
+
+.cart-total-title {
+font-weight: bold;
+font-size: 1.5em;
+color: black;
+margin-right: 20px;
+}
+
+.cart-total-price {
+color: #333;
+font-size: 1.1em;
+}
+
+.submit {
+display: block;
+margin: 40px auto 80px auto;
+font-size: 1.75em;
+}
+.list-group{
+    display: block;
+    font-family: 'Rubik', sans-serif;
+}
+label{
+    font-size: 30px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    float: left;
+}
+input{
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    float: left;
+    width: 38%;
+
+}
+    
+</style>
+</head>
+    
+    
+    <body>
+        <div class="container">
+            <h2>School Tools</h2>
+            <div class="row">
+        <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        </div>
+        </div>
+        </div>
+<div class="row">
+    <div class="col-2">
+        <h1>Pencils</h1>
+        </div>
+    </div>
+
+<div class="small-container">
+    <div class="row">
+    <div class="col-4">
+        
+        <img src="https://i.postimg.cc/yxB1ZSHT/ee03b98e184488e00c7c608a5e054fb366-My-first-Ticonderoga-rhorizontal-w600.jpg" alt="">
+        <h4>Dixon Ticonderoga Size #2 Pencil</h4>
+        <p>Php 45.00</p>
+        <button class="btn btn-primary shop-item-button" type="button" onclick="pencil1()">ADD TO CART</button>
+
+    </div>
+
+    <div class="col-4">
+        
+        <img src="https://i.postimg.cc/mrHBpSZw/b01e8780dcff26af6eb2c491b3b273f963-FC-JUMBO-rhorizontal-w600.jpg" alt="">
+        <h4>Faber-Castell Grip Jumbo Pencil</h4>
+        <p>Php 60.00</p>
+        <button class="btn btn-primary shop-item-button" type="button" onclick="pencil2()">ADD TO CART</button>
+
+    </div>
+
+    <div class="row">
+        
+        <div class="col-4">
+            
+            <img src="https://i.postimg.cc/C5v3xZL5/1478f3dcc61bebfb920ea7c0ec5cc2e319-Palomino-Golden-Bear-Orange-rhorizontal-w600.jpg" alt="">
+            <h4>Palomino Golden Bear Orange #2 Pencil</h4>
+            <p>Php 30.00</p>
+            <button class="btn btn-primary shop-item-button" type="button" onclick="pencil3()">ADD TO CART</button>
+
+            </div>
+
+            <div class="col-4">
+            
+                <img src="https://i.postimg.cc/pTC7s9jC/56be963bfc315008844fa4b746d2c2ab9c-Ticonderoga-4-rhorizontal-w600.jpg" alt="">
+                <h4>Dixon Ticonderoga Wood-Cased #4 Extra Hard Pencil</h4>
+                <p>Php 55.00</p>
+                <button class="btn btn-primary shop-item-button" type="button" onclick="pencil4()">ADD TO CART</button>
+    
+                </div>
+    
+        </div>
+
+        <div class="row">
+        
+            <div class="col-4">
+                
+                <img src="https://i.postimg.cc/yYGqqSbr/74e567e593c646210791bacc39701a48c6-Learner-w600.jpg" alt="">
+                <h4>General's Learner No Roll Jumbo Pencil</h4>
+                <p>Php 50.00</p>
+                <button class="btn btn-primary shop-item-button" type="button" onclick="pencil5()">ADD TO CART</button>
+    
+                </div>
+    
+                <div class="col-4">
+                
+                    <img src="https://i.postimg.cc/JnMv33st/8ac79cad57b593484920a51f4680ff6014-FORESTCHOICE2-w600.jpg" alt="">
+                    <h4>Palomino ForestChoice Pencil</h4>
+                    <p>Php 35.00</p>
+                    <button class="btn btn-primary shop-item-button" type="button" onclick="pencil6()">ADD TO CART</button>
+        
+                    </div>
+        
+            </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <h1>Erasers</h1>
+                    </div>
+                </div>
+
+                <div class="small-container">
+                    <div class="row">
+                    <div class="col-4">
+                        
+                        <img src="https://i.postimg.cc/cJ9kYqGk/91l9-SPJTABL-AC-SX679.jpg" alt="">
+                        <h4>Prismacolor Scholar Latex Free Eraser</h4>
+                        <p>Php 30.00</p>
+                        <button class="btn btn-primary shop-item-button" type="button" onclick="eraser1()">ADD TO CART</button>
+                
+                    </div>
+                
+                    <div class="col-4">
+                        
+                        <img src="https://i.postimg.cc/wv1fQW6q/81l8-Shl-WCc-L-AC-SX679.jpg" alt="">
+                        <h4>Sakura Sumo Grip Eraser</h4>
+                        <p>Php 25.00</p>
+                        <button class="btn btn-primary shop-item-button" type="button" onclick="eraser2()">ADD TO CART</button>
+                
+                    </div>
+                
+                    <div class="row">
+                        
+                        <div class="col-4">
+                            
+                            <img src="https://i.postimg.cc/FzcT27dw/71-Cwv-FFz-L-L-AC-SX425.jpg" alt="">
+                            <h4>Tombow MONO Colored Pencil Eraser</h4>
+                            <p>Php 20.00</p>
+                            <button class="btn btn-primary shop-item-button" type="button" onclick="eraser3()">ADD TO CART</button>
+                
+                            </div>
+                
+                            <div class="col-4">
+                            
+                                <img src="https://i.postimg.cc/v8621SqX/71adj9-Hm-KUL-AC-SX425.jpg" alt="">
+                                <h4>Faber Castell Kneaded Eraser</h4>
+                                <p>Php 30.00</p>
+                                <button class="btn btn-primary shop-item-button" type="button" onclick="eraser4()">ADD TO CART</button>
+                    
+                                </div>
+                    
+                        </div>
+                
+                        <div class="row">
+                        
+                            <div class="col-4">
+                                
+                                <img src="https://i.postimg.cc/3J5S2Czh/51d305f-Hzh-L-AC-SX425.jpg" alt="">
+                                <h4>Pentel Ain Regular Size Eraser</h4>
+                                <p>Php 30.00</p>
+                                <button class="btn btn-primary shop-item-button" type="button" onclick="eraser5()">ADD TO CART</button>
+                    
+                                </div>
+                    
+                                <div class="col-4">
+                                
+                                    <img src="https://i.postimg.cc/bvBLrQ1K/71v-AEw-Mh2d-L-AC-SX300-SY300-QL70-FMwebp.webp" alt="">
+                                    <h4>Tombow MONO Eraser</h4>
+                                    <p>Php 25.00</p>
+                                    <button class="btn btn-primary shop-item-button" type="button" onclick="eraser6()">ADD TO CART</button>
+                        
+                                    </div>
+                        
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <h1>Papers</h1>
+                                    </div>
+                                </div>
+                
+                                <div class="small-container">
+                                    <div class="row">
+                                    <div class="col-4">
+                                        
+                                        <img src="https://i.postimg.cc/26XFXLQF/1-64f09ff8-cc12-4c7d-a027-57bf9bc4999d-750x.jpg" alt="">
+                                        <h4>Excellent Long Yellow Pad</h4>
+                                        <p>Php 30.00</p>
+                                        <button class="btn btn-primary shop-item-button" type="button" onclick="paper1()">ADD TO CART</button>
+                                
+                                    </div>
+                                
+                                    <div class="col-4">
+                                        
+                                        <img src="https://i.postimg.cc/WzBmsRfd/4610-4473.jpg" alt="">
+                                        <h4>Veco Sticker Paper Matte White A4</h4>
+                                        <p>Php 45.00</p>
+                                        <button class="btn btn-primary shop-item-button" type="button" onclick="paper2()">ADD TO CART</button>
+                                
+                                    </div>
+                                
+                                    <div class="row">
+                                        
+                                        <div class="col-4">
+                                            
+                                            <img src="https://i.postimg.cc/zfxc8Bw3/91-Iy-It-FFw-RL-AC-SX569.jpg" alt="">
+                                            <h4>Crayola Construction Paper</h4>
+                                            <p>Php 70.00</p>
+                                            <button class="btn btn-primary shop-item-button" type="button" onclick="paper3()">ADD TO CART</button>
+                                
+                                            </div>
+                                
+                                            <div class="col-4">
+                                            
+                                                <img src="https://i.postimg.cc/bJKLw2ZY/4073-1865.jpg" alt="">
+                                                <h4>Office Warehouse Oslo Paper White</h4>
+                                                <p>Php 25.00</p>
+                                                <button class="btn btn-primary shop-item-button" type="button" onclick="paper4()">ADD TO CART</button>
+                                    
+                                                </div>
+                                    
+                                        </div>
+                                
+                                        <div class="row">
+                                        
+                                            <div class="col-4">
+                                                
+                                                <img src="https://i.postimg.cc/Rh71CprG/5-8ce9aec8-57c5-44d7-97e9-e3a0e3f78525-750x.jpg" alt="">
+                                                <h4>Easywrite Grade Pad Paper</h4>
+                                                <p>Php 20.00</p>
+                                                <button class="btn btn-primary shop-item-button" type="button" onclick="paper5()">ADD TO CART</button>
+                                    
+                                                </div>
+                                    
+                                                <div class="col-4">
+                                                
+                                                    <img src="https://i.postimg.cc/SsqxFgrm/image.png" alt="">
+                                                    <h4>Little Town Art Paper</h4>
+                                                    <p>Php 25.00</p>
+                                                    <button class="btn btn-primary shop-item-button" type="button" onclick="paper6()">ADD TO CART</button>
+                                        
+                                                    </div>
+                                        
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <h1>Pens</h1>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="small-container">
+                                                    <div class="row">
+                                                    <div class="col-4">
+                                                        
+                                                        <img src="https://i.postimg.cc/Y0CXVwLY/84d983ec3a7161ecd94723fd749dc6ed35-100-pilot-fineliner-rhorizontal-w600.jpg" alt="">
+                                                        <h4>Pilot Fineliner Pen</h4>
+                                                        <p>Php 25.00</p>
+                                                        <button class="btn btn-primary shop-item-button" type="button" onclick="pen1()">ADD TO CART</button>
+                                                
+                                                    </div>
+                                                
+                                                    <div class="col-4">
+                                                        
+                                                        <img src="https://i.postimg.cc/TYy0W0Vd/eadae8056c3041b4c215dab77cebca23be-99-slicci-2-rhorizontal-w600.jpg" alt="">
+                                                        <h4>Pentel Arts Slicci 0.25 mm. Pen</h4>
+                                                        <p>Php 35.00</p>
+                                                        <button class="btn btn-primary shop-item-button" type="button" onclick="pen2()">ADD TO CART</button>
+                                                
+                                                    </div>
+                                                
+                                                    <div class="row">
+                                                        
+                                                        <div class="col-4">
+                                                            
+                                                            <img src="https://i.postimg.cc/3x5X0Tr1/cf1d71d0995e614415f5f1087836ec020e-98-uniball-jetstream-rhorizontal-w600.jpg" alt="">
+                                                            <h4>Uni-ball Jetstream Pen</h4>
+                                                            <p>Php 20.00</p>
+                                                            <button class="btn btn-primary shop-item-button" type="button" onclick="pen3()">ADD TO CART</button>
+                                                
+                                                            </div>
+                                                
+                                                            <div class="col-4">
+                                                            
+                                                                <img src="https://i.postimg.cc/YjcWF670/70a40d6e1e94d33cc3e25a789bfff9f651-rsvp-rhorizontal-w600.jpg" alt="">
+                                                                <h4>Pilot Metropolitan Pen</h4>
+                                                                <p>Php 40.00</p>
+                                                                <button class="btn btn-primary shop-item-button" type="button" onclick="pen4()">ADD TO CART</button>
+                                                    
+                                                                </div>
+                                                    
+                                                        </div>
+                                                
+                                                        <div class="row">
+                                                        
+                                                            <div class="col-4">
+                                                                
+                                                                <img src="https://i.postimg.cc/ZRCHFxGx/6309e7306d23fc9fab5f7154b5d91e5a56-koh-i-nor-rhorizontal-w600.jpg" alt="">
+                                                                <h4>Pentel R.S.V.P. RT Pen</h4>
+                                                                <p>Php 35.00</p>
+                                                                <button class="btn btn-primary shop-item-button" type="button" onclick="pen5()">ADD TO CART</button>
+                                                    
+                                                                </div>
+                                                    
+                                                                <div class="col-4">
+                                                                
+                                                                    <img src="https://i.postimg.cc/nh2GyWZ1/da73ccaee2908c05a95fa9b9446d0cd67b-staedtler-pigment-liner-rhorizontal-w600.jpg" alt="">
+                                                                    <h4>Koh-I-Noor Rapidograph</h4>
+                                                                    <p>Php 50.00</p>
+                                                                    <button class="btn btn-primary shop-item-button" type="button" onclick="pen6()">ADD TO CART</button>
+                                                        
+                                                                    </div>
+                                                        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+<section class="container content-section">
+        <h class="section-header" style="font-size: 50px;">CART</h>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM AND PRICE</span>
+            <span class="cart-quantity cart-header cart-column"></span>
+        </div>
+        <div class="orderList mt-3" >
+            <div class="list-group">
+              <div class="list-group" id="cartItems" style="font-size: 28px; text-align: left;"></div>
+            </div>
+        </div>
+        <div class="totalPrice mt-4" style="margin-left: 65%;">
+            <h4>Total:  <span id="total">0</span>.00 PHP</h4>
+        </div>
+        <h style="text-align: center; font-size: 50px;font-family: 'Kdam Thmor Pro', sans-serif;">Your Delivery Details</h>
+        <form action=""  onsubmit="goto()">
+            <label style="margin-bottom: 20px;">Name:</label>
+            <input name="cust_name" style="margin-bottom: 20px;">
+            <label style="margin-bottom: 20px; margin-left: 10px;" >E-Mail:</label>
+            <input name="cust_email" style="margin-bottom: 20px;">
+            <label style="margin-left: 23%;">Address:</label>
+            <input name="cust_addr">
+            <input type="hidden" class="form-control" id="cust_order" name="cust_order">
+            <input type="submit" value="PURCHASE" style="display: block;margin: 40px auto 80px auto;font-size: 1.75em; margin-left: 30%; padding: 20px; background-color: pink;">
+        </form>
+    </section>
+
+    <script>
+        var cust_order = [];
+        function pencil1(){
+            var order = {
+                prod_name: "Dixon Ticonderoga Size #2 Pencil",
+                prod_price: 45, 
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pencil2(){
+            var order = {
+                prod_name: "Faber-Castell Grip Jumbo Pencil",
+                prod_price: 60,    
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pencil3(){
+            var order = {
+                prod_name: "Palomino Golden Bear Orange #2 Pencil",
+                prod_price: 30,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pencil4(){
+            var order = {
+                prod_name: "Dixon Ticonderoga Wood-Cased #4 Extra Hard Pencil",
+                prod_price: 55,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pencil5(){
+            var order = {
+                prod_name: "General's Learner No Roll Jumbo Pencil",
+                prod_price: 50,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pencil6(){
+            var order = {
+                prod_name: "Palomino ForestChoice Pencil",
+                prod_price: 35,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function eraser1(){
+            var order = {
+                prod_name: "Prismacolor Scholar Latex Free Eraser",
+                prod_price: 30,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function eraser2(){
+            var order = {
+                prod_name: "Sakura Sumo Grip Eraser",
+                prod_price: 25,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function eraser3(){
+            var order = {
+                prod_name: "Tombow MONO Colored Pencil Eraser",
+                prod_price: 20,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function eraser4(){
+            var order = {
+                prod_name: "Faber Castell Kneaded Eraser",
+                prod_price: 30,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function eraser5(){
+            var order = {
+                prod_name: "Pentel Ain Regular Size Eraser",
+                prod_price: 30,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function eraser6(){
+            var order = {
+                prod_name: "Tombow MONO Eraser",
+                prod_price: 25,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function paper1(){
+            var order = {
+                prod_name: "Excellent Long Yellow Pad",
+                prod_price: 30,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function paper2(){
+            var order = {
+                prod_name: "Veco Sticker Paper Matte White A4",
+                prod_price: 45,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function paper3(){
+            var order = {
+                prod_name: "Crayola Construction Paper",
+                prod_price: 70,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function paper4(){
+            var order = {
+                prod_name: "Office Warehouse Oslo Paper White",
+                prod_price: 25,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function paper5(){
+            var order = {
+                prod_name: "Easywrite Grade Pad Paper",
+                prod_price: 20,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function paper6(){
+            var order = {
+                prod_name: "Little Town Art Paper",
+                prod_price: 25,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pen1(){
+            var order = {
+                prod_name: "Pilot Fineliner Pen",
+                prod_price: 25,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pen2(){
+            var order = {
+                prod_name: "Pentel Arts Slicci 0.25 mm. Pen",
+                prod_price: 35,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pen3(){
+            var order = {
+                prod_name: "Uni-ball Jetstream Pen",
+                prod_price: 20,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pen4(){
+            var order = {
+                prod_name: "Pilot Metropolitan Pen",
+                prod_price: 40,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pen5(){
+            var order = {
+                prod_name: "Pentel R.S.V.P. RT Pen",
+                prod_price: 35,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+        function pen6(){
+            var order = {
+                prod_name: "Koh-I-Noor Rapidograph",
+                prod_price: 50,   
+            };
+            cust_order.push(order);
+            addtocart();
+        }
+
+
+    function removeOrder(i, totalPrice) {
+    var x = 0
+    var x = totalPrice - cust_order[i].prod_price;
+    document.getElementById("total").innerHTML = x;
+    cust_order.splice(i,1);
+    addtocart();
+}
+        function addtocart() {
+            var totalPrice = 0;
+                document.getElementById("cartItems").innerHTML = " ";            
+                for(var i=0; i<cust_order.length; i++){
+                    totalPrice = totalPrice + cust_order[i].prod_price;
+                    document.getElementById("total").innerHTML = totalPrice;
+                    document.getElementById("cartItems").innerHTML +=  cust_order[i].prod_name +'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+ cust_order[i].prod_price + "php"+'<button class="btn btn-sm btn-outline-danger" onclick="removeOrder(' + i + ',' + totalPrice + ')">REMOVE</button></li><br>';
+                    }
+            }
+
+            function goto() {
+                document.getElementById("cust_order").value = JSON.stringify(cust_order);
+            }
+    </script>
+    </body>
+    </html>
